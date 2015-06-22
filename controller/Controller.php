@@ -14,13 +14,13 @@ class Controller {
 	{
 		if (!isset($_GET['car']))
 		{
-			// no special book is requested, we'll show a list of all available books
+			//show all cars
 			$cars = $this->model->getCarList();
 			include 'view/carlist.php';
 		}
 		else
 		{
-			// show the requested book
+			// show a single car
 			$car = $this->model->getCar($_GET['car']);
 			include 'view/viewcar.php';
 		}
